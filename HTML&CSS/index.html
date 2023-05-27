@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="function.js"></script>
 </head>
 
 <body class="index">
@@ -35,26 +36,7 @@
   </div>
 
 
-  <script type="text/javascript">
-    function validarDados() {
-      var nome = document.forms["form"]["user"].value;
-      var Senha = document.forms["form"]["password"].value;
-
-
-      if (nome != 'ADMIN') {
-        var teste = alert('Usuário ou Senha incorretos');
-        location.reload();
-        return false;
-
-      } else if (Senha != 'PREFEITURA') {
-        teste = alert('Usuário ou Senha incorretos');
-        location.reload();
-        return false;
-
-      }
-      return true;
-    }
-  </script>
+  
 </body>
 
 </html>

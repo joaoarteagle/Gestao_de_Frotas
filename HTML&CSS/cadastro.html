@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="backgroud">
+   <header><button onclick="goBack()" class="comeback"><img src="img/comeback.png" alt="voltar" class="comebackimg"></button></header> 
+  
+
+    <fieldset class="formulario_cadastro">
+        <legend><img src="img/brasao.png" alt="logo" class="logo"></legend>
+        <form action="index.html" method="post" class="cadastro">
+            
+            <label>
+
+                <h1 class="cad">CADASTRO DE FUNCIONÁRIOS</h1>
+
+                <input type="text" class="user" name="nameComplete" placeholder="Nome Completo" required>
+            </label>
+
+            <input type="text" class="user" name="CPF" placeholder="Insira seu CPF (xxx.xxx.xxx-xx)"
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido"><br>
+
+            <input type="datetime" class="user" name="dataNasc" placeholder="Data de Nascimento (dd/mm/aaaa)"
+                pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})"
+                title="Digite uma data de nascimento válida (dd/mm/aaaa)">
+
+            <input type="email" class="user" name="email_user" placeholder="Email"><br>
+
+
+            <input type="text" class="user" name="user" placeholder="Nome de Usuário" required>
+
+            <input type="password" class="user" name="password" placeholder="Senha" required><br>
+
+            <select name="CNH" class="user" placeholder="categorias CNH" required><br>
+                <option value="">CATEGORIA CHN</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="A&B">A&B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+            </select>
+
+            <button class="button" onclick="cadastrar()">CADASTRAR</button><br>
+
+        </form>
+
+    </fieldset>
+
+<script type="text/javascript">
+ function goBack() {
+      window.history.back();
+    }
+
+  function cadastrar(){
+    
+   alert('CADASTRO EFETUADO COM SUCESSO');
+   window.history.back();
+  }  
+</script>
+
+</body>
+
+
+
+ 
+</html>

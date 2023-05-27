@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Prefeitura</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="index">
+  <div class="imagem">
+    <img src="img/torre.jpeg" alt="torre">
+  </div>
+
+  <div class="formulario">
+
+    <form action="principal_area.html" method="POST" id="form" onsubmit="return validarDados()? true:false">
+      <label>
+        <img src="img/logo.jpeg" alt="logo" class="logo">
+        <h1 class="Login">LOGIN</h1>
+
+        <input type="text" class="user" name="user" placeholder="Usuário" required><br>
+      </label>
+      <input type="password" class="user" id="password" placeholder="Senha" required><br>
+
+      <!-- <input type="submit" class="buttonUser" name="submit" value="ENTRAR"> -->
+      <input type="checkbox" class="check" name="check" placeholder="Marcar para não esquecer">Marcar para não esquecer
+      <a href="cadastro.html" class="nop_cadastro">Não possui cadastro?</a><br>
+      <input type="submit" class="button" value="ENTRAR"><br>
+
+    </form>
+  </div>
+
+
+  <script type="text/javascript">
+    function validarDados() {
+      var nome = document.forms["form"]["user"].value;
+      var Senha = document.forms["form"]["password"].value;
+
+
+      if (nome != 'ADMIN') {
+        var teste = alert('Usuário ou Senha incorretos');
+        location.reload();
+        return false;
+
+      } else if (Senha != 'PREFEITURA') {
+        teste = alert('Usuário ou Senha incorretos');
+        location.reload();
+        return false;
+
+      }
+      return true;
+    }
+  </script>
+</body>
+
+</html>

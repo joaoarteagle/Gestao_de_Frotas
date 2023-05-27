@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Veículos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="backgroud">
+   <header><button onclick="goBack()" class="comeback"><img src="img/comeback.png" alt="voltar" class="comebackimg"></button></header> 
+  
+
+    <fieldset class="formulario_cadastro">
+        <legend><img src="img/brasao.png" alt="logo" class="logo"></legend>
+        <form action="#" method="get" class="cadastro">
+            
+            <label>
+
+                <h1 class="cad">CADASTRO DE VEÍCULOS</h1>
+
+                <input type="text" class="user" name="NomeVeiculo" placeholder="Nome do Veículo" required>
+            </label>
+
+            <input type="text" class="user" name="MarcaVeiculo" placeholder="Marca do Veículo"
+                required><br>
+
+            <input type="number" class="user" name="IdadeVeiculo" placeholder="Idade do Veículo"
+                required maxlength="10">
+
+            <input type="text" class="user" name="placaVeiculo" placeholder="Placa do Veículo"><br>
+
+
+            <input type="number" class="user" name="Quilometragem" placeholder="Quilometragem em KM" required>
+
+            <input type="text" class="user" name="ModeloVeiculo" placeholder="Modelo do Veículo" required><br>
+
+        
+
+            <button type="submit"  class="button" onclick="cadastrar()">CADASTRAR</button><br>
+
+        </form>
+
+    </fieldset>
+
+<script type="text/javascript">
+ function goBack() {
+      window.history.back();
+    }
+
+    function cadastrar(){
+    
+    alert('CADASTRO EFETUADO COM SUCESSO');
+    window.history.back();
+   }     
+</script>
+
+</body>
+
+
+
+ 
+</html>

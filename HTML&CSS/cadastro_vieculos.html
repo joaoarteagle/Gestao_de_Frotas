@@ -32,7 +32,7 @@
             <input type="number" class="user" name="IdadeVeiculo" placeholder="Idade do Veículo"
                 required maxlength="10">
 
-            <input type="text" class="user" name="placaVeiculo" placeholder="Placa do Veículo"><br>
+            <input type="text" class="user" name="placaVeiculo" placeholder="Placa do Veículo" pattern="[A-Z]{3}-\d{4}" required><br>
 
 
             <input type="number" class="user" name="Quilometragem" placeholder="Quilometragem em KM" required>
@@ -41,13 +41,17 @@
 
         
 
-            <button type="submit"  class="button" onclick="cadastrar()">CADASTRAR</button><br>
+            <button type="submit"  class="button" onclick="cadastrarVeiculo()">CADASTRAR</button><br>
 
         </form>
 
     </fieldset>
 
-
+    <script type="text/javascript">
+        var formulario = document.getElementById("cadastroVec");
+        formulario.addEventListener("submit", cadastrarVeiculo);
+    </script>
+    
 
 </body>
 

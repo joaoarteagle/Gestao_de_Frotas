@@ -17,7 +17,8 @@
 
     <fieldset class="formulario_cadastro">
         <legend><img src="img/brasao.png" alt="logo" class="logo"></legend>
-        <form action="index.html" method="post" class="cadastro">
+
+        <form action="index.html" method="post" id="cadastro">
             
             <label>
 
@@ -27,11 +28,11 @@
             </label>
 
             <input type="text" class="user" name="CPF" placeholder="Insira seu CPF (xxx.xxx.xxx-xx)"
-                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido"><br>
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF válido" required><br>
 
             <input type="datetime" class="user" name="dataNasc" placeholder="Data de Nascimento (dd/mm/aaaa)"
                 pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/((19|20)\d{2})"
-                title="Digite uma data de nascimento válida (dd/mm/aaaa)">
+                title="Digite uma data de nascimento válida (dd/mm/aaaa)" required>
 
             <input type="email" class="user" name="email_user" placeholder="Email"><br>
 
@@ -50,13 +51,16 @@
                 <option value="E">E</option>
             </select>
 
-            <button class="button" onclick="cadastrar()">CADASTRAR</button><br>
+            <button class="button" onclick="cadastrarFuncionario()">CADASTRAR</button><br>
 
         </form>
 
     </fieldset>
 
-
+<script type="text/javascript">
+    var formulario = document.getElementById("cadastro");
+    formulario.addEventListener("submit", cadastrarFuncionario);
+</script>
 
 </body>
 

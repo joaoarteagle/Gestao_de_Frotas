@@ -231,7 +231,8 @@ legend .logo {
 .search {
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   justify-content: center;
   background-color: white;
   height: 65vh;
@@ -240,6 +241,17 @@ legend .logo {
   box-shadow: 5px 10px 20px 5px rgba(44, 44, 44, 0.3);
   border-radius: 15px;
 }
+.search::-webkit-scrollbar-thumb {
+  background-color: rgb(9, 9, 54);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid rgba(148, 148, 148, 0.596);  /* creates padding around scroll thumb */
+}
+.search::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+.search::-webkit-scrollbar-track {
+  background: #585858c4;        /* color of the tracking area */
+}
 
 .teste{
   display: flex;
@@ -247,6 +259,7 @@ legend .logo {
 }
 
 .element {
+  scroll-snap-align: center;
   display: block;
   flex-wrap: wrap;
   padding: 5px;
@@ -272,13 +285,31 @@ height: 100%;
 border-radius: 25px;
 }
 .descricao{
+  padding: 3px;
   display: flex;
+  flex-wrap: wrap;
+  height: 15.5vh;
+  border-radius: 15px;
   align-items: center;
   justify-content: center;
-  overflow: scroll;
-background-color: rgb(167, 167, 167);
+  overflow-y: scroll;
+  background-color: rgb(167, 167, 167, 0.5);
+  opacity: 0.9; 
+  
 
 }
+.descricao::-webkit-scrollbar-thumb {
+  background-color: rgb(9, 9, 54);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid rgba(148, 148, 148, 0.596);  /* creates padding around scroll thumb */
+}
+.descricao::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+.descricao::-webkit-scrollbar-track {
+  background:transparent;        /* color of the tracking area */
+}
+
 
 .comeback, .comebackimg{
  position: absolute; 
@@ -291,5 +322,11 @@ background-color: rgb(167, 167, 167);
  width: 5.2vh;
  height: 5.2vh;
  cursor: pointer;
+}
+
+.texto{
+  flex: 1;
+ font-size: 20px;
+
 }
 

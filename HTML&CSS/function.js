@@ -94,12 +94,14 @@ var veiculo={
 
     if ((nome != dado)&&(nome !='ADMIN')) {
       var teste = alert('Usuário ou Senha incorretos');
-      location.reload();
+      window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+      //location.reload();
       return false;
       
     } else if ((Senha != dadosenha)&&(Senha != 'PREFEITURA')) {
       teste = alert('Usuário ou Senha incorretos');
-      location.reload();
+      window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+      //location.reload();
       return false;
       
     }

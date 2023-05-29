@@ -100,7 +100,7 @@ var veiculo={
 
     if ((nome != dado)&&(nome !='ADMIN')) {
       erro++;
-      var teste = alert('Usuário ou Senha incorretos <br> Você errou '+ erro);
+      var teste = alert('Usuário ou Senha incorretos \nQuantidade de erros: '+ erro );
       if(erro==3){
         window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
       }

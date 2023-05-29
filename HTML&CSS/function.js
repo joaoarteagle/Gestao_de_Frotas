@@ -1,4 +1,4 @@
-
+var erro=0;
 
 function goBack() {
     window.history.back();
@@ -72,8 +72,7 @@ var veiculo={
   console.log(veiculo.ModeloVeiculo);
       alert('CADASTRO EFETUADO COM SUCESSO');
       localStorage.setItem('cadastroVec', JSON.stringify(veiculo));
-     window.history.back();
-     
+     novoVeiculo();
 
     }else{
       alert('PREENCHA TODOS OS CAMPOS COMO REQUISITADO');
@@ -81,7 +80,11 @@ var veiculo={
     }
   
    
- }  
+ } 
+ function novoVeiculo(){
+ var divElement = document.getElementsByClassName("textdes");
+ divElement.textontent = "Nome: " + veiculo.NomeVeiculo + "<br>Marca: " + veiculo.MarcaVeiculo;
+}
 /*---------------------------------------------------------------------*/
 
  function validarDados() {
@@ -91,21 +94,34 @@ var veiculo={
     var dado = dadosArmazenados.login;
     var dadosenha = dadosArmazenados.senha;
     
+    
 
     if ((nome != dado)&&(nome !='ADMIN')) {
-      var teste = alert('Usuário ou Senha incorretos');
-      window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+      erro++;
+      var teste = alert('Usuário ou Senha incorretos <br> Você errou '+ erro);
+      if(erro==3){
+        window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+      }
+     
+     // window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
       //location.reload();
       return false;
       
     } else if ((Senha != dadosenha)&&(Senha != 'PREFEITURA')) {
-      teste = alert('Usuário ou Senha incorretos');
-      window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
-      //location.reload();
+      erro++;
+      teste = alert('Usuário ou Senha incorretos <br> Você errou '+ erro);
+     
+      if(erro==3){
+        window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+  
+      }
+      //window.open('file:///C:/Users/Usuario/Desktop/Desafio_Profissional/HTML&CSS/erro.html','_self');
+     // location.reload();
       return false;
       
     }
- 
+    
+    erro=0;
     return true;
   
   }

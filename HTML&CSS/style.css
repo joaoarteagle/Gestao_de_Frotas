@@ -193,6 +193,7 @@ legend .logo {
 .categoriaVeiculo:hover {
   background-color: #d3d3d3;
   box-shadow: 5px 5px 20px 5px rgba(44, 44, 44, 0.3);
+  cursor: pointer;
 }
 
 .pesquisa,.categoriasV {
@@ -340,3 +341,6 @@ p{
 
 
 
+h3{
+  margin: 5px;
+}

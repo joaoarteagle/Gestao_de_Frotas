@@ -83,7 +83,9 @@ var veiculo={
  } 
  function novoVeiculo(){
  var divElement = document.getElementsByClassName("textdes");
- divElement.textontent = "Nome: " + veiculo.NomeVeiculo + "<br>Marca: " + veiculo.MarcaVeiculo;
+ var dadosArmazenados = JSON.parse(localStorage.getItem('cadastroVec'));
+
+ divElement.textontent = "Nome: " + dadosArmazenados.NomeVeiculo + "<br>Marca: " + dadosArmazenados.MarcaVeiculo;
 }
 /*---------------------------------------------------------------------*/
 
